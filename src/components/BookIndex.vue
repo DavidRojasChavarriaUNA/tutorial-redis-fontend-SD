@@ -12,7 +12,7 @@
         <th class="text-center">Actions</th>
       </tr>
        </thead><tbody>
-       <tr v-for='book in books'>
+       <tr v-for='book in books' :key="book._id">
        <td>{{book.title}}</td>
        <td>{{book.author}}</td>
        <td>{{book.publisher}}</td>

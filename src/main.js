@@ -5,5 +5,5 @@ import './assets/css/normalize.css';
 import './assets/css/skeleton.css';
 const app = createApp(App);
   
-app.config.globalProperties.url = '';
+app.config.globalProperties.url = 'https://tutorial-redis-dr-sd.netlify.app';
 app.use(router).mount("#app");
