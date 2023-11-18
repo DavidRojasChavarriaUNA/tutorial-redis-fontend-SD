@@ -10,22 +10,22 @@
         <th>Publisher</th>
         <th>Edition</th>
         <th class="text-center">Actions</th>
-      </tr>
+	   </tr>
        </thead><tbody>
-       <tr v-for='book in books' :key="book._id">
+       <tr v-for='book in books' :key="book.id">
        <td>{{book.title}}</td>
        <td>{{book.author}}</td>
        <td>{{book.publisher}}</td>
        <td>{{book.edition}}</td>
        <td>
        <router-link class="button"
-         :to="'/book/show/'+book._id">Show</router-link>
+         :to="'/book/show/'+book.id">Show</router-link>
        &nbsp;
        <router-link class="button"
-         :to="'/book/edit/'+book._id">Edit</router-link>
+         :to="'/book/edit/'+book.id">Edit</router-link>
        &nbsp;
        <a class="button"
-         v-on:click="deleteBook(book._id)">Erase</a>
+         v-on:click="deleteBook(book.id)">Erase</a>
        </td>
        </tr></tbody>
      </table>
@@ -34,7 +34,9 @@
    </div>
   </div>
 </template>
+
 <script>
+	
 export default {
   name: "Book Index",
   data() {

@@ -44,7 +44,7 @@
       <router-link class="button button-primary" 
         to="/book">Back</router-link>
        <a v-if='edit' class="button button-primary" style="float: right"
-         v-on:click="updateBook(book._id)">Update</a>
+         v-on:click="updateBook(book.id)">Update</a>
        <a v-if='create' class="button button-primary" style="float: right"
          v-on:click="createBook()">Create</a>
      </div>
@@ -52,8 +52,10 @@
   </div>
 </div>
 </template>
+
 <script>
 import { useRoute } from 'vue-router'
+
 export default {
   name: "Book Details",
   props: ['create','edit','create'],
@@ -69,7 +71,7 @@ export default {
       this.findBook(route.params.id);
     else {
       this.book = {
-        '_id': 'book_'+Math.floor(Math.random()*100000000),'title':'','edition':'',
+        'id': Math.floor(Math.random()*100000000),'title':'','edition':'',
         'copyright':0,'language':'','pages':0,'author':'','author_id':0,
         'publisher':'','publisher_id':0 };
     }

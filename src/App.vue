@@ -13,11 +13,12 @@
  <router-view />
   <div class="row">
     <button disabled="disabled" class="twelve columns button-primary">
-      Copyright (c) 2022 - Armando Arce-Orozco
+      Copyright (c) 2020 - Armando Arce-Orozco
     </button>
   </div>
 </div>
 </template>
+
 <script>
 export default {
   name: "App",
